@@ -93,6 +93,7 @@
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.Size = new System.Drawing.Size(356, 20);
             this.txtOldPassword.TabIndex = 6;
+            this.txtOldPassword.Text = "mjbx_P@ssw0rd";
             // 
             // label2
             // 

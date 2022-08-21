@@ -25,7 +25,6 @@ namespace ChangeSqlitePassword
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\";
                 openFileDialog.Filter = "sqlite db (*.db)|*.db|All files (*.*)|*.*";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
@@ -57,6 +56,7 @@ namespace ChangeSqlitePassword
                 sQLiteConnection.Open();
                 var newPass = txtNewPassword.Text.Trim();
                  sQLiteConnection.ChangePassword(newPass);
+                /*
                 var query = "select * from [table-name]";
                 SQLiteCommand sQLiteCommand = sQLiteConnection.CreateCommand();
                 sQLiteCommand.CommandText = query;
@@ -67,7 +67,9 @@ namespace ChangeSqlitePassword
                 {
                     MessageBox.Show(dr["column-name"].ToString());
                 }
+                */
             }
+            MessageBox.Show($"Password Changed Successfuly.");
         }
     }
 }
